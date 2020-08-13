@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Customer from './customer';
 
 class Customers extends Component{
     
@@ -13,17 +14,20 @@ class Customers extends Component{
     }
 
     callApi = async () => {
-        const response = await fetch('/api/cutomers');
+        const response = await fetch('/api/customers');
         const body = await response.json();
         return body;
     }
 
     render() {
-      return (
-        {this.state.customers ? this.state.customers.map(c => {
-            return (<p key ={c.id} id={c.id} name ={c.name}></p>);
-        }) : "" 
-        }
+        return (
+            <ul>
+            {this.state.customers ? this.state.customers.map(c => {
+                return (<Customer key ={c.id} id={c.id} name ={c.name}/>)
+            }) : "" 
+            }            
+            </ul>
+        );
     }
 }
 
