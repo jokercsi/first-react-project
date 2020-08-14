@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Customer from './customer';
+import { Table } from '@material-ui/core';
 
 class Customers extends Component{
     

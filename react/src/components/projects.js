@@ -10,7 +10,7 @@ class Projects extends Component{
 
   toggleCategories(){
 
-    if(this.state.activeTab == 0){
+    if(this.state.activeTab === 0){
       return(
         <Card shadow={6} style={{minWidth: '450', margin: 'auto'}}>
           <CardTitle style={{color: '#black', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png) center / cover'}} >React Project 1</CardTitle>
@@ -32,7 +32,7 @@ class Projects extends Component{
         
       )
     }
-     else if(this.state.activeTab == 1){
+     else if(this.state.activeTab === 1){
       return(
         <div><h1>This is jquery</h1></div>  
       )   
