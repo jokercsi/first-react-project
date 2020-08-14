@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Customer from './customer';
-import { Table } from '@material-ui/core';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class Customers extends Component{
     
@@ -22,12 +26,22 @@ class Customers extends Component{
 
     render() {
         return (
-            <ul>
+            <div className ="customers-table">
+            <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>이름</TableCell>
+                <TableCell>번호</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
             {this.state.customers ? this.state.customers.map(c => {
                 return (<Customer key ={c.id} id={c.id} name ={c.name}/>)
             }) : "" 
-            }            
-            </ul>
+            }     
+            </TableBody>
+            </Table>
+            </div>
         );
     }
 }

@@ -1,10 +1,13 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 var Customer = (props) => {
     return(
-        <li>
-            <span>{props.name}, {props.id}</span>
-        </li>
+        <TableRow>
+            <TableCell>{props.name}</TableCell>
+            <TableCell>{props.id}</TableCell>
+        </TableRow>
     )
 }
 

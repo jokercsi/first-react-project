@@ -135,3 +135,11 @@
 	padding: 2em;
 
 }
+
+
+/* customers page */
+.customers-table{
+	margin: auto;
+	width: 60%;
+	padding-top: 4em;
+}
