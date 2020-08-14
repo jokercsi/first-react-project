@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 var Customer = (props) => {
     return(
         <li>
-            <span>{props.name},{props.id}</span>
+            <span>{props.name}, {props.id}</span>
         </li>
     )
 }
